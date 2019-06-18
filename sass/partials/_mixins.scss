@@ -1,0 +1,61 @@
+/* 
+ Media Query
+ */
+@mixin xs {
+	@media screen and (max-width: 566px) {
+		@content;
+	}
+}
+
+@mixin sm {
+	@media screen and (min-width: 567px) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media screen and (min-width: 768px) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media screen and (min-width: 1024px) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media screen and (min-width: 1280px) {
+		@content;
+	}
+}
+
+/* 
+ Buttons
+ */
+@mixin button($bg, $color) {
+	background-color: $bg;
+	color: $color;
+
+	&:hover {
+		background-color: lighten($bg, 10%);
+	}
+
+	&.outline {
+		background-color: transparent;
+		border: 1px solid $bg;
+		color: $bg;
+
+		&:hover {
+			background-color: $bg;
+			color: $color;
+		}
+	}
+
+	&:disabled {
+		background-color: $bg;
+		cursor: not-allowed;
+		opacity: .5;
+	}
+}

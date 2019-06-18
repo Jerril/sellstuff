@@ -1,0 +1,53 @@
+// Colors
+$primary: #D7EE10;
+$secondary: #20252B;
+
+$lighter-gray: #f0f0f3;
+$light-gray: #dadada;
+$gray: #7A7A7A;
+$dark-gray: #353535;
+
+$white: #fff;
+$black: #000;
+
+$red: #F85325;
+
+// typogrphy
+$font-family: 'Open Sans', 'Segoe UI', 'Helvetica Neue', Helvetica, sans-serif;
+$line-height: 1.8; 
+
+$font-size: .9em;
+$font-size-sm: .8em;
+$font-size-lg: 1.1em;
+
+$font-weight: 400;
+$font-weight-md: 500;
+$font-weight-lg: 700;
+
+
+$text-color: #7F7F84;
+$text-color-dark: darken($text-color, 30%);
+
+$heading-font-weight: $font-weight-lg;
+
+// links
+$link-color: #237DC7;
+
+
+// border radius
+$border-radius: .2rem;
+
+// layout
+$spacing-x: 1rem;
+$spacing-y: 2rem;
+
+$grid-columns: 12;
+$grid-column-gutter: 1rem;
+
+// buttons
+$button-width: 200px;
+$button-spacing-x: $spacing-x;
+
+
+// navbar
+$navbar-middle-height: 60px;

@@ -1,0 +1,415 @@
+.navbar {
+	position: relative;
+	z-index: 10000;
+
+	ul {
+		@extend .unstyled;
+	}
+
+	// top
+	&__top {
+	
+		.container {
+			background-color: #fff;
+		}
+
+		a {
+			display: inline-block;
+			color: $gray;
+			line-height: $spacing-y;
+			font-size: $font-size-sm;
+			padding: 0 ($spacing-x*.5);
+
+			[class*='icon-'] {
+				vertical-align: middle;
+				font-size: 1.3em;
+			}
+
+			&:hover {
+				text-decoration: none;
+				color: $black;
+			}
+		}
+
+		&-links {
+			display: none;
+		}
+	}
+
+
+	&__offers {
+
+		a {
+			font-weight: $font-weight-lg;	
+		}
+		
+		&::before {
+			content: "Today's Offer";
+			border: 1px solid $gray;
+			color: $gray;
+			font-size: $font-size-sm;
+			font-weight: $font-weight-lg;	
+			background-color: $primary;
+			padding: 3px 6px;
+		}
+	}
+
+
+	// middle
+	&__middle {
+
+		.container {
+			background-color: #fff;
+			padding: 0;
+			border-bottom: 1px solid $light-gray;
+			border-top: 1px solid $light-gray;
+		}
+	}
+
+	&__middle-center {
+		width: 100%;
+	}
+
+	&__middle-left,
+	&__middle-right {
+		display: flex;
+	}
+
+	&__middle-right {
+		position: absolute;
+		top: 34px;
+		right: 0;
+	}
+
+	// logo
+	&__logo {
+		border-left: 1px solid $light-gray;
+		color: $black;
+		font-size: 1.2em;
+		font-weight: $font-weight-lg;
+		text-transform: uppercase;
+		letter-spacing: .3em;
+		height: $navbar-middle-height * .8;
+		line-height: $navbar-middle-height * .8;
+		padding-right: $spacing-x;
+		padding-left: $spacing-x;
+		position: relative;
+		left: 50px;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	// search
+	&__search {
+		border-top: 1px solid $light-gray;
+		height: $navbar-middle-height;
+		position: relative;
+
+		input {
+			width: 100%;
+			height: $navbar-middle-height;
+			border: 0;
+			background: transparent;
+			padding: 0 ($spacing-x * 4) 0 $spacing-x;
+
+			&:focus {
+				outline: 0;
+			}
+		}
+
+		[type="submit"] {
+			position: absolute;
+			top: 0;
+			right: 0;
+			height: $navbar-middle-height;
+			padding: 0 ($spacing-x * 1.5);
+			border: 0;
+			background-color: transparent;
+			color: $black;
+			cursor: pointer;
+
+			&:hover {
+				background-color: lighten($primary, 10%);
+			}
+		}
+	}
+
+	// dropdown
+	&__dropdown {
+
+		> a {
+			display: block;
+			line-height: $navbar-middle-height * .8;
+			text-align: center;
+			color: $black;
+			padding: 0 ($spacing-x);
+			white-space: nowrap;
+
+			&:hover {
+				text-decoration: none;
+				background-color: lighten($primary, 10%);
+			}
+		}
+
+		[class*="icon-"] {
+			position: relative;
+			top: 2px;
+		}
+
+		&.open {
+			.navbar__dropdown-menu	{
+				left: 0;
+			}
+
+			&::before {
+				content: "";
+				display: block;
+				position: fixed;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0,0,0,.5);
+				z-index: 999;
+				top: 0;
+				left: 0;
+			}
+		}
+
+		.navbar__special {
+			display: none;
+		}
+
+	}
+
+	&__dropdown-menu {
+		background: $white;
+		position: fixed;
+		top: 0;
+		left: -250px;
+		width: 250px;
+		height: 100%;
+		z-index: 1000;
+		border-right: 1px solid $light-gray;
+		transition: left .4s ease;
+
+		ul {
+			padding: $spacing-x ($spacing-x * 2);
+		}
+
+		a {
+			display: block;
+			color: #000;
+			font-size: .9em;
+			font-weight: $font-weight;
+			line-height: 2;
+		}
+
+		.navbar__categories-heading {
+			color: #000;
+			font-weight: $font-weight-lg;
+			text-transform: uppercase;
+			margin-bottom: 10px;
+			letter-spacing: .1em;
+		}
+	}
+	
+
+	// right
+	.navbar__cart,
+	.navbar__account {
+		display: block;
+		position: relative;
+	}
+
+	// cart count
+	.navbar__cart {
+
+		[class*="icon-"] {
+			display: inline-block;
+			position: relative;
+			left: -6px;
+			top: 4px;
+		}
+
+		&-count {
+			display: inline-block;
+			font-size: .8em;
+			font-weight: $font-weight-lg;
+			line-height: 22px;
+			width: 22px;
+			height: 22px;
+			background-color: $primary;
+			border-radius: 100%;
+			text-align: center;
+			position: absolute;
+			top: 8px;
+			right: 6px;
+		}
+	}
+
+	// category-btn
+	&__category-btn {
+		border-left: 1px solid $light-gray;
+		position: absolute;
+		left: 0;
+		top: 34px;
+		width: 50px;
+		text-align: center;
+
+		.navbar__link-text {
+			display: none;
+		}
+	}
+
+	@include md {
+		position: fixed;
+		width: 100%;
+		top: 0;
+		left: 0;
+		transition: top .3s ease;
+
+		&.navbar-scroll-collapse {
+			top: -$spacing-y; 	
+		}
+
+		&__top {
+
+			.container {
+				display: flex;
+				justify-content: space-between;
+			}
+			
+			&-links {
+				display: block;
+
+				li {
+					float: left;
+				}
+			}
+		}
+
+
+		&__middle {
+			.container {
+				display: flex;
+				justify-content: space-between;
+				position: relative;
+			}
+
+			&-right {
+				position: static;
+			}
+		}
+
+
+		// logo
+		&__logo {
+			font-size: 1.5em;
+			height: $navbar-middle-height;
+			line-height: $navbar-middle-height;
+			padding-right: $spacing-x;
+			padding-left: $spacing-x;
+			left: 0px;
+		}
+
+		&__search {
+			border-top: 0;
+			border-bottom: 0;
+			border-left: 1px solid $light-gray;
+			border-right: 1px solid $light-gray;
+		}
+
+		// cart
+		&__dropdown {
+			
+			> a {
+				line-height: $navbar-middle-height;
+				padding: 0 ($spacing-x * 1.5);
+			}
+
+			.navbar__cart,
+			.navbar__account {
+				display: block;
+				border-left: 0;
+				border-right: 1px solid $light-gray;
+			}
+
+			.container {
+				display: flex;
+				border-left: 1px solid $light-gray;
+				border-right: 1px solid $light-gray;
+			}
+
+			.navbar__categories {
+				display: flex;
+				width: 60%;
+			}
+
+			.navbar__special {
+				display: block;
+				background-color: $light-gray;
+				height: 200px;
+				margin: $spacing-y $spacing-x $spacing-y 0;
+				width: 40%;
+				overflow: hidden;
+				background: url(../images/nav_offers.jpg) no-repeat center center / cover;
+
+				img {
+					max-height: 100%;
+				}
+			}
+
+			&:hover {
+				.navbar__dropdown-menu	{
+					display: block;
+				}
+			}
+
+			&.open {
+				&::before {
+					display: none;
+				}
+			}
+
+		}
+
+		&__dropdown-menu {
+			background: transparent;
+			position: absolute;
+			top: 99%;
+			left: 0;
+			width: 100%;
+			height: auto;
+			border-right: 0;
+			display: none;
+			text-align: left;
+
+			.container {
+				background: $white;
+			}
+		}
+
+		.navbar__cart {
+			&-count {
+				top: 14px;
+				right: 14px;
+			}
+		}
+	
+		&__category-btn {
+			position: static;
+			width: auto;
+
+			.navbar__link-text {
+				display: inline-block;
+			}
+
+			[class*="icon-"] {
+				margin-left: 5px;
+			}
+		}
+
+	}
+}
+

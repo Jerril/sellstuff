@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>SellStuff</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href="https://file.myfontastic.com/xivLPJMPJWYetYWQ9dkbvX/icons.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/owl-carousel/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body style="min-height: 2000px">
+	
+	<!-- navbar -->
+	<nav class="navbar">
+
+		<div class="navbar__top">
+			<div class="container">
+				<div class="navbar__left">
+					<div class="navbar__offers">
+						<a href="#">10% discount on Titan watches</a>
+					</div>
+				</div>
+				<div class="navbar__right">
+					<ul class="navbar__top-links">
+						<li><a href="#"><span class="icon-mobile"></span> Download App</a></li>
+						<li><a href="#"><span class="icon-question"></span> Customer Support</a></li>
+						<li><a href="#"><span class="icon-truck"></span> Track Order</a></li>
+						<li><a href="#"><span class="icon-bell"></span> Messages</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="navbar__middle"> 
+			<div class="container">
+				<div class="navbar__middle-left">
+					<a href="#" class="navbar__logo">sellStuff</a>
+
+					<div class="navbar__dropdown navbar__category-btn" data-toggle="dropdown">
+						<a href="#" class="navbar__dropdown-link"><span class="navbar__link-text">Categories</span> <span class="icon-bars"></span></a>
+
+						<div class="navbar__dropdown-menu dropdown">
+							<div class="container">
+								<div class="navbar__categories">
+									<ul>
+										<li><a href="#">Latest releases</a></li>
+										<li><a href="#">Analog watches</a></li>
+										<li><a href="#">Digital watches</a></li>
+										<li><a href="#">Smart watches</a></li>
+									</ul>
+									<ul>
+										<li class="navbar__categories-heading">Brands</li>
+										<li><a href="#">Titan</a></li>
+										<li><a href="#">Tommy Hilfiger</a></li>
+										<li><a href="#">Casio</a></li>
+										<li><a href="#">Tagheuer</a></li>
+										<li><a href="#">Rolex</a></li>
+										<li><a href="#">Emporio Armani</a></li>
+										<li><a href="#">Gucci</a></li>
+										<li><a href="#">Show all...</a></li>
+									</ul>
+								</div>
+								<div class="navbar__special">
+									
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="navbar__middle-center">
+					<form class="navbar__search">
+						<input type="text" name="search-terms" id="search-terms" placeholder="Search for watches here...">
+						<button type="submit"><span class="icon-search"></span></button>
+					</form>
+				</div>
+				<div class="navbar__middle-right">
+					<div class="navbar__dropdown">
+						<a href="#" class="navbar__cart" data-toggle="dialog" data-target="#cart">
+							<span class="icon-cart"></span>
+							<span class="navbar__cart-count">0</span>
+						</a>
+					</div>
+
+					<div class="navbar__dropdown">
+						<a href="#" class="navbar__account"><span class="icon-users"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</nav>
+	<!-- navbar -->
+	
+	<main class="page-content">
+
+		<!-- carousel -->
+		<div class="carousel">
+			<div class="owl-carousel">
+				  <div class="carousel__slide"> 
+				  	<a href="#"><img src="images/carousel/slide-1.jpg" alt="Watches"></a>
+				  </div>
+				  <div class="carousel__slide">
+				  	<a href="#"><img src="images/carousel/slide-2.jpg" alt=""></a>
+				  </div>
+				  <div class="carousel__slide"> Your Content </div>
+			</div>
+		</div>
+		<!-- carousel -->
+	
+		<!-- latest-collections -->
+		<section class="latest-collections">
+			<div class="container">
+				
+				<div class="section-heading">
+					<h2>Latest Collections</h2>
+					<p>Check out what's trending</p>
+				</div>
+
+				<div class="grid collapse">
+					<div class="md-3">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam esse ea consectetur, non commodi, aliquam omnis maxime impedit distinctio nisi est nobis. Distinctio quidem dolores animi optio repellendus, voluptatum reprehenderit!</p>
+					</div>
+					<div class="md-6">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam esse ea consectetur, non commodi, aliquam omnis maxime impedit distinctio nisi est nobis. Distinctio quidem dolores animi optio repellendus, voluptatum reprehenderit!</p>
+					</div>
+					<div class="md-3">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Totam esse ea consectetur, non commodi, aliquam omnis maxime impedit distinctio nisi est nobis. Distinctio quidem dolores animi optio repellendus, voluptatum reprehenderit!</p>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- latest-collections -->
+
+	</main>
+	
+	<!-- Cart Dialog Box -->
+	<div class="dialog dialog-sm" id="cart">
+		<div class="dialog__contents">
+			<div class="dialog__header">
+				<button class="dialog__close-btn" data-close="dialog">&times;</button>
+
+				<p>Your Cart (2)</p>
+			</div>
+			<div class="dialog__body">
+				<div class="cart">
+					<table class="cart__table">
+						<tr>
+							<td><span class="cart__image"><img src="images/products/thumbs/watch-1.jpg" alt="Watch"></span></td>
+							<td class="cart__table-expand"><a href="#" class="cart__name">Festina Quartz White Dial</a>
+								<strong class="cart__price">₹ 2499</strong>	
+							</td>
+							<td>
+								<div class="cart__qty">
+									<span><button type="button" class="cart__qty-add">+</button></span>
+									<span><input type="text" class="cart__qty-input" value="1"></span>
+									<span><button type="button" class="cart__qty-subtract">-</button></span>
+								</div>
+							</td>
+							<td>
+								<button type="button" class="cart__delete"><span class="icon-trash"></span></button>
+							</td>
+						</tr>
+
+						<tr>
+							<td><span class="cart__image"><img src="images/products/thumbs/watch-2.jpg" alt="Watch"></span></td>
+							<td class="cart__table-expand"><a href="#" class="cart__name">HK General</a>
+								<strong class="cart__price">₹ 1599</strong>	
+							</td>
+							<td>
+								<div class="cart__qty">
+									<span><button type="button" class="cart__qty-add">+</button></span>
+									<span><input type="text" class="cart__qty-input" value="1"></span>
+									<span><button type="button" class="cart__qty-subtract">-</button></span>
+								</div>
+							</td>
+							<td>
+								<button type="button" class="cart__delete"><span class="icon-trash"></span></button>
+							</td>
+						</tr>
+					</table>
+
+					<div class="cart__footer">
+						<strong class="cart__total-price">Total : ₹ 3999</strong>
+						<button class="btn primary cart__checkout-btn">Checkout</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Cart Dialog Box -->
+	<script src="js/jquery-3.2.1.min.js"></script>
+	<script src="js/owl-carousel/owl.carousel.min.js"></script>
+	<script src="js/app.js"></script>
+</body>
+</html>

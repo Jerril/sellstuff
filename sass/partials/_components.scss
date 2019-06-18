@@ -1,0 +1,138 @@
+/* 
+ Buttons
+ */
+.btn {
+	border: 0;
+	border-radius: $border-radius;
+	cursor: pointer;
+	display: inline-block;
+	font: inherit;
+	font-size: .9em;
+	font-weight: $font-weight-md;
+	line-height: 3.8;
+	padding: 0 $button-spacing-x;
+	width: $button-width;
+	transition: all .3s ease;
+
+	@include button($lighter-gray, $text-color); 
+
+
+	&.primary {
+		@include button($primary, $black); 
+	}
+
+	&.secondary {
+		@include button($secondary, $lighter-gray); 
+	}
+} 
+
+
+/* 
+ Dialog
+ */
+.dialog {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, .3);
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity .3s ease;
+	z-index: 100000;
+	
+	.dialog__contents {
+		max-width: 800px;
+		background-color: #fff;
+		padding: 0 1rem;
+		margin: 2rem auto;
+		border-radius: $border-radius;
+		box-shadow: 0 0 40px rgba(0,0,0,.3);
+		position: relative;
+	}
+
+	.dialog__header {
+		border-bottom: 1px solid $lighter-gray;
+		padding: 1rem 0 .5rem;
+		margin-bottom: 1rem;
+
+		p {
+			color: #000;
+			font-size: 1em;
+			font-weight: $font-weight-lg;
+			margin: 0;
+		}
+	}
+
+	.dialog__close-btn {
+		background: transparent;
+		border: 0;
+		cursor: pointer;
+		position: absolute;
+		right: 10px;
+		top: 8px;
+		width: 40px;
+		height: 40px;
+		font-size: 1.5em;
+		font-weight: $font-weight-lg;
+		opacity: .3;
+
+		&:hover,
+		&:focus {
+			opacity: 1;
+		}
+
+		&:focus {
+			outline: 0;
+		}
+	}
+
+	&.dialog-sm .dialog__contents {
+		max-width: 500px;
+	}
+
+	&.open {
+		opacity: 1;
+		pointer-events: auto;
+	}
+}
+
+
+/* 
+ section-heading
+ */
+.section-heading {
+	margin: ($spacing-y * 1.5) 0 $spacing-y;
+	text-align: center;
+
+	> * {
+		margin: 0;
+	}
+
+	> :first-child {
+		text-transform: uppercase;
+		font-weight: 800;
+		font-size: 1.5em;
+
+		&::before,
+		&::after {
+			content: '';
+			display: inline-block;
+			height: 4px;
+			width: 100px;
+			background-color: #000;
+			vertical-align: middle;
+			margin: 0 $spacing-x;
+			position: relative;
+			top: -2px;
+		}
+	}
+
+	> :nth-child(2) {
+		font-style: italic;
+		line-height: 1;
+		letter-spacing: .2em;
+	}
+}

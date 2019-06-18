@@ -1,0 +1,35 @@
+
+.carousel {
+	background: #f0f0f0;
+
+	.carousel__slide {
+		height: 300px;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			width: auto;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			transform: translate(-50%, 0);
+		}
+	}
+
+
+	.owl-prev,
+	.owl-next {
+		display: block;
+		position: absolute;
+		top: 50%;
+		transform: translate(0, -50%);
+		background: $primary;
+		padding: $spacing-y/2 $spacing-x;
+		color: #fff;
+	}
+
+	.owl-prev { left: 0; }
+	.owl-next { right: 0; }
+
+}

@@ -1,0 +1,78 @@
+/* 
+ * Typography
+ *
+ */
+
+/* 
+ Body
+ */
+body {
+	font-family: $font-family;
+	font-size: $font-size;
+	font-weight: $font-weight;
+	color: $text-color;
+	line-height: $line-height;
+}
+
+/* 
+ Headings
+ */
+h1, h2, h3, h4, h5, h6 {
+	color: $text-color-dark;
+	margin-bottom: $spacing-y; 
+	font-weight: $heading-font-weight;
+}
+
+/* 
+ Paragraphs
+ */
+p {
+	margin-bottom: ($spacing-y * .8);
+}
+
+/* 
+ Lists
+ */
+ul, ol {
+	margin: $spacing-y 0;
+	padding: 0 0 0 ($spacing-x * 1.1);
+
+	li {
+
+	}
+
+	// list helpers
+	&.unstyled {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+dl {
+
+	dt {
+		color: $text-color-dark;
+		font-weight: $font-weight-md;
+	}
+
+	dd {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/* 
+ Anchor
+ */
+a {
+	color: $link-color;
+	text-decoration: none;
+	transition: all .3s ease;
+
+	&:hover {
+		text-decoration: underline;
+	}
+
+}
+

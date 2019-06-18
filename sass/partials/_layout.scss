@@ -1,0 +1,103 @@
+/* 
+ globals
+ */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	@include md {
+		padding-top: 96px;
+	}
+}
+
+/* 
+ page-content
+ */
+.page-content {
+	max-width: 1600px;
+	margin: 0 auto;
+}
+
+/* 
+ Container
+ */
+.container {
+	width: auto;
+	margin: 0 auto;
+	padding: 0 $spacing-x;
+
+	@include lg {
+		width: 960px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	@include xl {
+		width: 1200px;
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+
+
+/* 
+ grid
+ */
+.grid {
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: -$grid-column-gutter;
+	margin-right: -$grid-column-gutter;
+
+	> * {
+		width: 100%;
+		padding: 0 $grid-column-gutter;
+	}
+
+	&.collapse {
+		margin-left: 0;
+		margin-right: 0;
+
+		> * {
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+
+
+// mobile
+@for $i from 1 through $grid-columns {
+	.xs-#{$i} { width: percentage($i / $grid-columns); }
+}
+
+// landscape mobile
+@include sm {
+	@for $i from 1 through $grid-columns {
+		.sm-#{$i} { width: percentage($i / $grid-columns); }
+	}
+}
+
+// tablets
+@include md {
+	@for $i from 1 through $grid-columns {
+		.md-#{$i} { width: percentage($i / $grid-columns); }
+	}
+}
+
+
+// desktop small
+@include lg {
+	@for $i from 1 through $grid-columns {
+		.lg-#{$i} { width: percentage($i / $grid-columns); }
+	}
+}
+
+// desktop large
+@include xl {
+	@for $i from 1 through $grid-columns {
+		.xl-#{$i} { width: percentage($i / $grid-columns); }
+	}
+}
+
